@@ -1,0 +1,88 @@
+  <!doctype html>
+<html>
+<head>
+  <title>Prueba tecnica tecno</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+    
+  <div class="container">
+    <h1>Bienvenido a tu lista de tareas <span class="badge badge-pill badge-warning">Nuevo</span></h1>
+    <h2>Tarea</h2>
+    <p>
+        <form>
+            <input type="text" id="list-group">
+            <br><input type="submit" class="btn btn-primary" onclick="return add_li()" value="Agregar"><span class="badge badge-pill badge-light ml-1"></span>
+        </form>
+    </p>
+    
+    
+      <p>Define las tareas según la importancia con los siguientes items seguidos de la descripción</p>
+    <span class="badge badge-pill badge-primary">Primary</span>
+<span class="badge badge-pill badge-secondary">Secondary</span>
+<span class="badge badge-pill badge-success">Success</span>
+<span class="badge badge-pill badge-danger">Danger</span>
+<span class="badge badge-pill badge-warning">Warning</span>
+<span class="badge badge-pill badge-info">Info</span>
+<span class="badge badge-pill badge-light">Light</span>
+<span class="badge badge-pill badge-dark">Dark</span>
+    
+  </div>
+  
+  <table >
+    <tr id="fila0">
+      <td class="list-group-item list-group-item-primary">Una tarea de caracter primario</td>
+      
+      <td><input type="button" onclick="eliminarFila(0);" value="Eliminar" /></td>
+    </tr>
+    <tr id="fila1">
+      <td class="list-group-item list-group-item-secondary">Una tarea de caracter secundario</td>
+      
+      <td><input type="button" onclick="eliminarFila(1);" value="Eliminar" /></td>
+    </tr>
+    <tr id="fila2">
+      <td class="list-group-item list-group-item-success">Una tarea realizada</td>
+      
+      <td><input type="button" onclick="eliminarFila(2);" value="Eliminar" /></td>
+    </tr>
+    
+    <tr id="fila3">
+      <td class="list-group-item list-group-item-danger">Peligro</td>
+     
+      <td><input type="button" onclick="eliminarFila(3);" value="Eliminar" /></td>
+    </tr>
+    <tr id="fila4">
+        <td class="list-group-item list-group-item-warning">Advertencia</td>
+       
+        <td><input type="button" onclick="eliminarFila(4);" value="Eliminar" /></td>
+      </tr>
+      <tr id="fila5">
+        <td class="list-group-item list-group-item-info">Información</td>
+       
+        <td><input type="button" onclick="eliminarFila(5);" value="Eliminar" /></td>
+      </tr>
+      <tr id="fila6">
+        <td class="list-group-item list-group-item-light">Tarea light</td>
+       
+        <td><input type="button" onclick="eliminarFila(6);" value="Eliminar" /></td>
+      </tr>
+      <tr id="fila7">
+        <td class="list-group-item list-group-item-dark">Tarea dark</td>
+       
+        <td><input type="button" onclick="eliminarFila(7);" value="Eliminar" /></td>
+      </tr>
+  </table>
+  <script>
+    function eliminarFila(index) {
+		$("#fila" + index).remove();
+	}
+  </script>
+</body>
+</html>
